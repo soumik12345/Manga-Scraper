@@ -4,3 +4,5 @@ pandas==1.2.0
 requests==2.25.1
 streamlit==0.74.1
 urllib3==1.26.2
+tqdm~=4.55.1
+selenium~=3.141.0

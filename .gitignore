@@ -3,3 +3,4 @@ venv/
 **pycache**
 **.html**
 test.py
+**.log**
