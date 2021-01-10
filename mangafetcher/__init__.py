@@ -1,1 +1,1 @@
-from .search import SearchEngine
+from mangafetcher.mangahere_manager.search import SearchEngine

@@ -4,3 +4,4 @@ venv/
 **.html**
 test.py
 **.log**
+**ipynb**

@@ -2,7 +2,7 @@ import string
 import typing
 import dataclasses
 from bs4 import BeautifulSoup
-from .base import ThreadedFetcher
+from mangafetcher.manganelo_manager.base import ThreadedFetcher
 
 
 @dataclasses.dataclass(frozen=True)
