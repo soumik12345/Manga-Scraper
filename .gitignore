@@ -1,0 +1,12 @@
+venv/
+.idea/
+**pycache**
+**.html**
+test.py
+**.log**
+**ipynb**
+dump/
+pdf_dump/
+**.jpg**
+**.png**
+.DS_Store
