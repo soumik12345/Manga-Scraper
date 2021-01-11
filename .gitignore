@@ -6,3 +6,7 @@ test.py
 **.log**
 **ipynb**
 dump/
+pdfs/
+**.jpg**
+**.png**
+.DS_Store

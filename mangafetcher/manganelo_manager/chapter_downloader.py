@@ -6,11 +6,13 @@ from selenium.webdriver import Firefox, FirefoxProfile
 
 class ChapterDownloader:
 
-    def __init__(self, executable_path='/Users/soumikrakshit/webDrivers/geckodriver'):
+    def __init__(
+            self, executable_path='/Users/soumikrakshit/webDrivers/geckodriver',
+            dump_path='/Users/soumikrakshit/Workspace/comicsDownloader/dump/'):
         profile = FirefoxProfile()
         profile.set_preference("browser.download.folderList", 2)
         profile.set_preference("browser.download.manager.showWhenStarting", False)
-        profile.set_preference("browser.download.dir", '/Users/soumikrakshit/Workspace/comicsDownloader/dump/')
+        profile.set_preference("browser.download.dir", dump_path)
         profile.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/x-gzip")
         self.browser = Firefox(profile, executable_path=executable_path)
 
@@ -19,7 +21,7 @@ class ChapterDownloader:
         ul_tag = self.browser.find_elements_by_class_name('container-chapter-reader')[0]
         img_tags = ul_tag.find_elements_by_tag_name('img')
         action = ActionChains(self.browser)
-        for index, img_tag in enumerate(img_tags[:5]):
+        for index, img_tag in enumerate(img_tags):
             print(img_tag)
             self.browser.execute_script("arguments[0].scrollIntoView();", img_tag)
             action.move_to_element(img_tag)

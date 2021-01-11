@@ -8,3 +8,4 @@ tqdm~=4.55.1
 selenium~=3.141.0
 bs4~=0.0.1
 PyAutoGUI~=0.9.52
+img2pdf~=0.4.0
