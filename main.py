@@ -25,6 +25,8 @@ make_directory('dump')
 start_index = int(input('Enter the number of the book to start downloading from: '))
 end_index = int(input('Enter the number of the book to start downloading from: '))
 
+gecko_driver_path = input('Enter Geckodriver Path: ')
+
 remove_directory('./dump/')
 make_directory('pdf_dump')
 pdf_location = './pdf_dump'
@@ -39,7 +41,10 @@ for index in range(start_index - 1, end_index - 1):
             chapters[index].title, chapters[index].url
         )
     )
-    downloader = ChapterDownloader(dump_path=os.getcwd() + '/dump/')
+    downloader = ChapterDownloader(
+        executable_path=gecko_driver_path,
+        dump_path=os.getcwd() + '/dump/'
+    )
     downloader.download_images(chapters[index].url)
     print('Compiling into PDF')
 
