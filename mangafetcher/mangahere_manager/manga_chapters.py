@@ -1,5 +1,5 @@
 from typing import List
-from ..chapter import Chapter
+from mangafetcher.mangahere_manager.chapter import Chapter
 from ..utils import get_rendered_content
 
 

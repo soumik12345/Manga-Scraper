@@ -1,5 +1,5 @@
 from typing import List
-from mangafetcher.manga import Manga
+from mangafetcher.mangahere_manager.manga import Manga
 from bs4 import BeautifulSoup
 from mangafetcher.utils import get_rendered_content
 
