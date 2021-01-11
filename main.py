@@ -26,6 +26,8 @@ start_index = int(input('Enter the number of the book to start downloading from:
 end_index = int(input('Enter the number of the book to start downloading from: '))
 
 gecko_driver_path = input('Enter Geckodriver Path: ')
+compile_to_pdf = input('Compile to PDF???[y/n] ').lower()
+compile_to_pdf = True if compile_to_pdf == 'y' else False
 
 remove_directory('./dump/')
 make_directory('pdf_dump')
@@ -46,11 +48,10 @@ for index in range(start_index - 1, end_index - 1):
         dump_path=os.getcwd() + '/dump/'
     )
     downloader.download_images(chapters[index].url)
-    print('Compiling into PDF')
 
-    print()
-
-    PDFCreator.create_pdf(
-        image_dump_dir='./dump/',
-        pdf_location=pdf_location + '/{}.pdf'.format(chapters[index].title)
-    )
+    if compile_to_pdf:
+        print('Compiling into PDF')
+        PDFCreator.create_pdf(
+            image_dump_dir='./dump/',
+            pdf_location=pdf_location + '/{}.pdf'.format(chapters[index].title)
+        )
