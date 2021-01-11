@@ -1,6 +1,6 @@
 from typing import List
 from dataclasses import dataclass
-from ..utils import get_rendered_content
+from mangafetcher.utils import get_rendered_content
 
 
 @dataclass(frozen=True)

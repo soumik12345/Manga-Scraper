@@ -1,5 +1,5 @@
 import os
-from mangafetcher.manganelo_manager import (
+from mangafetcher import (
     SearchEngine, ChapterManager,
     ChapterDownloader, PDFCreator
 )
