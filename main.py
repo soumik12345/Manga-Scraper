@@ -54,8 +54,7 @@ for index in range(start_index - 1, end_index - 1):
         print('Compiling into PDF')
         PDFCreator.create_pdf(
             image_dump_dir='./dump/',
-            pdf_location='test.pdf'
-            # pdf_location=pdf_location + '/' + chapters[index].title + '.pdf'
+            pdf_location=pdf_location + '/' + chapters[index].title + '.pdf'
         )
 
 remove_directory('./dump/')
