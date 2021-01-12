@@ -1,5 +1,7 @@
 # Manga Scraper
 
+A simple tool to download Manga and create Chapter-wise PDFs easier to read.
+
 1. Install the latest version of Firefox.
 
 2. Download Gecko Driver for your respective platform.
@@ -11,3 +13,5 @@
 5. `python3 -m pip install -r requirements.txt`
 
 6. `python3 main.py`
+
+The CLI will guide you for the rest.
