@@ -12,7 +12,8 @@ query_string = input('Enter the manga you want: ')
 search_engine = SearchEngine(query=query_string.strip())
 results = search_engine.results()
 for result in results:
-    print('{} -> {}'.format(result.title, result.url))
+    try: print('{} -> {}'.format(result.title, result.url))
+    except: pass
 
 manga_url = input('Enter URL of the Manga: ')
 chapters = ChapterManager.get_chapter_links(chapter_url=manga_url.strip())
@@ -45,7 +46,7 @@ for index in range(start_index - 1, end_index - 1):
     )
     downloader = ChapterDownloader(
         executable_path=gecko_driver_path,
-        dump_path=os.getcwd() + '/dump/'
+        dump_path='C:\\Workspace\\Manga-Scraper\\dump'
     )
     downloader.download_images(chapters[index].url)
 
@@ -53,5 +54,8 @@ for index in range(start_index - 1, end_index - 1):
         print('Compiling into PDF')
         PDFCreator.create_pdf(
             image_dump_dir='./dump/',
-            pdf_location=pdf_location + '/{}.pdf'.format(chapters[index].title)
+            pdf_location='test.pdf'
+            # pdf_location=pdf_location + '/' + chapters[index].title + '.pdf'
         )
+
+remove_directory('./dump/')
