@@ -11,3 +11,5 @@ PyAutoGUI~=0.9.52
 img2pdf~=0.4.0
 opencv-python~=4.5.1.48
 Pillow~=8.1.0
+requests==2.25.1
+requests-html==0.10.0
