@@ -13,7 +13,7 @@ class ChapterDownloader:
         profile.set_preference("browser.download.folderList", 2)
         profile.set_preference("browser.download.manager.showWhenStarting", False)
         profile.set_preference("browser.download.dir", dump_path)
-        # profile.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/x-gzip")
+        profile.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/x-gzip")
         self.browser = Firefox(profile, executable_path=executable_path)
 
     def download_images(self, url):

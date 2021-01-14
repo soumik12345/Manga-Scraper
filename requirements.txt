@@ -9,3 +9,5 @@ selenium~=3.141.0
 bs4~=0.0.1
 PyAutoGUI~=0.9.52
 img2pdf~=0.4.0
+opencv-python~=4.5.1.48
+Pillow~=8.1.0
