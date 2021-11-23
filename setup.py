@@ -7,7 +7,7 @@ from setuptools.command.install import install
 
 here = os.path.abspath(os.path.dirname(__file__))
 
-VERSION = '0.2'
+VERSION = '0.3'
 DESCRIPTION = 'Download Manga into chapterwise PDF files'
 
 with open('requirements.txt') as f:
