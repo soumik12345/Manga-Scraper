@@ -1,13 +1,14 @@
 import os
 import subprocess
-from setuptools import setup, find_packages
+from distutils.core import setup
+from setuptools import find_packages
 from setuptools.command.install import install
+
 
 here = os.path.abspath(os.path.dirname(__file__))
 
 VERSION = '0.2'
 DESCRIPTION = 'Download Manga into chapterwise PDF files'
-LONG_DESCRIPTION = 'A package that downloads Manga into chapterwise PDF files or a single PDF file from various sources.'
 
 with open('requirements.txt') as f:
     required_dependencies = f.read().splitlines()
@@ -36,7 +37,7 @@ setup(
     author_email="19soumik.rakshit96@gmail.com",
     description=DESCRIPTION,
     long_description_content_type="text/markdown",
-    long_description=LONG_DESCRIPTION,
+    long_description=open(os.path.join(here, "README.md")).read(),
     packages=find_packages(),
     install_requires=required_dependencies,
     keywords=['python', 'manga', 'comic', 'scrape'],

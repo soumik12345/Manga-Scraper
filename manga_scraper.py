@@ -1,17 +1,6 @@
-"""
-Install the dependencies using
-```
-curl --compressed -s https://raw.githubusercontent.com/Akianonymus/mangadl-bash/master/release/install | bash -s
-pip install -r requirements.txt
-```
-Usage:
-```
-python manga_scraper.py
-```
-"""
+#!/usr/bin/python3
 
 import os
-import sys
 import cv2
 import img2pdf
 import subprocess
@@ -36,7 +25,7 @@ def split_list(given_list: List, chunk_size: int) -> List:
     ]
 
 
-def main():
+def download():
 
     font = Figlet(font='slant')
     print(font.renderText('Manga Scraper'))
@@ -95,4 +84,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    download()
