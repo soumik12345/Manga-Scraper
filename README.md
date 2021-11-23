@@ -1,42 +1,14 @@
 # Manga Scraper
 
-A simple tool to download Manga and create Chapter-wise PDFs easier to read.
+[![PyPI version](https://badge.fury.io/py/manga-scraper.svg)](https://badge.fury.io/py/manga-scraper)
 
-1. Install the latest version of Firefox.
+`manga-scraper` is a python package that downloads Manga into chapterwise PDF files or a single PDF file from various sources. It basically adds a post-processing layer on top of the basic functionality by [mangadl-bash](https://github.com/Akianonymus/mangadl-bash) created by [Akianonymus](https://github.com/Akianonymus) in order to convert the downloaded manga into chapter-wise PDF files or a single giant PDF file.
 
-2. Download Gecko Driver for your respective platform.
 
-3. `git clone https://github.com/soumik12345/Manga-Scraper`
+## Usage
 
-4. `cd Manga-Scraper`
+- Install `manga-scraper` using `pip install manga-scraper`.
 
-5. `python3 -m pip install -r requirements.txt`
+- Install the additional dependencies by running `installmanga`.
 
-6. `python3 main.py` or use the [Notebook](./Download.ipynb).
-
-The CLI will guide you for the rest.
-
-**Note:**
-
-1. The code I have written has been tested on Windows, Linux and MacOS. It seems to be working flawlessly on Mac and
-Linux but has a few issues on Windows, especially the `pyautogui` operations.
-
-2. The Manga that are being downloaded are all property of their respective creators. I don't own then in anyway.
-
-3. Manganelo, the site that is being scraped might change their code or page structures in future. I will try my best to
-support the application, although I don't give any guarantee.
-
-4. I would, sometimes in future attempt to write a version of the application that runs in Headless mode.
-
-5. If you find some bug in the application, or you think that Manganelo has updated their site, please raise a Pull Request. 
-I would address them as per my bandwidth.
-
-6. This application was initially written to collect data for a research project in Computer Vision. However, I soon 
-discovered that reading Manga on Kindle is a really awesome experience. Hence, I added the PDF compilation option.
-
-<figure>
-  <img src="./assets/sample.jpeg" alt="">
-  <figcaption>A sample panel from <strong>Yakusoku No Neverland</strong> on my Kindle</figcaption>
-</figure><br><br>
-
-**Enjoy!!!**
+- Run the command line interface using `scrapemanga`. The CLI would guide you through the download and the subsequent post-processing steps.
