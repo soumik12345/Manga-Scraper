@@ -1,5 +1,7 @@
 venv/
 .idea/
+dist/
+build/
 **pycache**
 **.html**
 test.py
@@ -10,3 +12,4 @@ dump/
 **.png**
 .DS_Store
 **.pdf**
+**.egg-info

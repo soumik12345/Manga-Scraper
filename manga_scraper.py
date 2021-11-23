@@ -6,12 +6,7 @@ pip install -r requirements.txt
 ```
 Usage:
 ```
-python download_manga.py <manga-url>
-```
-
-Example:
-```
-python download_manga.py https://chap.manganelo.com/manga-vx110117
+python manga_scraper.py
 ```
 """
 
@@ -23,6 +18,7 @@ import subprocess
 from tqdm import tqdm
 from glob import glob
 from typing import List
+from pyfiglet import Figlet
 
 
 def preprocess_images(file_paths: List[str], apply_prog_bar: bool = False):
@@ -41,7 +37,12 @@ def split_list(given_list: List, chunk_size: int) -> List:
 
 
 def main():
-    manga_url = sys.argv[1]
+
+    font = Figlet(font='slant')
+    print(font.renderText('Manga Scraper'))
+
+    manga_url = input("Enter Manga URL: ")
+    
     pdf_location = "./dump"
     if not os.path.isdir(pdf_location):
         os.mkdir(pdf_location)
@@ -53,7 +54,7 @@ def main():
     chapters = sorted(glob("dump/*/*"), key=lambda x: float(x.split('/')[-1].split('.')[0]))
     comic_name = chapters[0].split("/")[-2]
     
-    compile_into_single = input("Do you want to compile all chanpters to single pdf file? [y/n] ").lower() == "y"
+    compile_into_single = input("Do you want to compile all chapters to single pdf file? [y/n] ").lower() == "y"
     
     if not compile_into_single:
 
