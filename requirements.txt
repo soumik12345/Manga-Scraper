@@ -1,4 +1,3 @@
 img2pdf==0.4.3
 opencv-python==4.5.4.60
-pyfiglet==0.8.post1
 tqdm==4.62.3

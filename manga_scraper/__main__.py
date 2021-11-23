@@ -7,7 +7,6 @@ import subprocess
 from tqdm import tqdm
 from glob import glob
 from typing import List
-from pyfiglet import Figlet
 
 
 def preprocess_images(file_paths: List[str], apply_prog_bar: bool = False):
@@ -25,10 +24,18 @@ def split_list(given_list: List, chunk_size: int) -> List:
     ]
 
 
-def download():
+def install_mangadl():
+    try:
+        subprocess.check_output(["mangadl"])
+    except:
+        print("installing mangadl")
+        os.system(
+            "curl --compressed -s https://raw.githubusercontent.com/Akianonymus/mangadl-bash/master/release/install | bash -s"
+        )
+        print("mangadl installed")
 
-    font = Figlet(font='slant')
-    print(font.renderText('Manga Scraper'))
+
+def download():
 
     manga_url = input("Enter Manga URL: ")
     
