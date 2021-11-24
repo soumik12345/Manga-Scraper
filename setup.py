@@ -5,10 +5,10 @@ from setuptools import find_packages
 
 here = os.path.abspath(os.path.dirname(__file__))
 
-VERSION = '0.12'
-DESCRIPTION = 'Download Manga into chapterwise PDF files'
+VERSION = "0.12"
+DESCRIPTION = "Download Manga into chapterwise PDF files"
 
-with open('requirements.txt') as f:
+with open("requirements.txt") as f:
     required_dependencies = f.read().splitlines()
 
 
@@ -23,18 +23,18 @@ setup(
     long_description=open(os.path.join(here, "README.md")).read(),
     packages=find_packages(),
     install_requires=required_dependencies,
-    keywords=['python', 'manga', 'comic', 'scrape'],
+    keywords=["python", "manga", "comic", "scrape"],
     entry_points={
         "console_scripts": [
             "scrapemanga=manga_scraper.__main__:download",
-            "installmanga=manga_scraper.__main__:install_mangadl"]
+            "installmanga=manga_scraper.__main__:install_mangadl",
+        ]
     },
     classifiers=[
         "Development Status :: 2 - Pre-Alpha",
         "Intended Audience :: Other Audience",
         "Programming Language :: Python :: 3",
         "Operating System :: Unix",
-        "Topic :: Games/Entertainment"
+        "Topic :: Games/Entertainment",
     ],
-    
 )
