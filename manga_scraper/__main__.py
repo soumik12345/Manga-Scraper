@@ -73,14 +73,13 @@ def install_mangadl():
 
 def download():
 
-    manga_url = input("Enter Manga URL: ")
-
     pdf_location = "./dump"
     if not os.path.isdir(pdf_location):
         os.mkdir(pdf_location)
 
     download_comic = input("Do you want to download the comic? [y/n] ").lower() == "y"
     if download_comic:
+        manga_url = input("Enter Manga URL: ")
         subprocess.run(["mangadl", manga_url, "-d", "./dump"])
 
     chapters = sorted(
